@@ -1,0 +1,47 @@
+[user]
+	name = guowei.dong
+	email = 526470285@qq.com
+
+[alias]
+st = status -sb
+co = checkout
+br = branch
+mg = merge
+cm = commit
+ca=commit --amend
+cam=commit --amend -m
+acm=!git add . && git commit -m
+master=checkout master
+ds = diff --staged
+dt = difftool
+mt = mergetool
+last = log -1 HEAD
+latest = for-each-ref --sort=-committerdate --format=\"%(committername)@%(refname:short) [%(committerdate:short)] %(contents)\"
+ls = log --pretty=format:\"%C(yellow)%h %C(blue)%ad %C(red)%d %C(reset)%s %C(green)[%cn]\" --decorate --date=short
+l =log --graph --all --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
+ll =log --stat --abbrev-commit
+lg =log --color --graph --pretty=format:'%C(bold white)%h%Creset -%C(bold green)%d%Creset %s %C(bold green)(%cr)%Creset %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+llg =log --color --graph --pretty=format:'%C(bold white)%H %d%Creset%n%s%n%+b%C(bold blue)%an <%ae>%Creset %C(bold green)%cr (%ci)' --abbrev-commit
+hist = log --pretty=format:\"%C(yellow)%h %C(red)%d %C(reset)%s %C(green)[%an] %C(blue)%ad\" --topo-order --graph --date=short
+type = cat-file -t
+dump = cat-file -p
+
+[core]
+	autocrlf = input
+	excludesfile = /Users/dongguowei/.gitignore_global
+
+[push]
+default = simple
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+[init]
+	defaultBranch = master
+
+[http]
+	postBuffer = 100485760
+
