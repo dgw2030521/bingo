@@ -1,0 +1,21 @@
+import type {
+ListRouteBusRes,
+ListRouteBusParams,
+} from '@/types/swagger2ts/tpmng/bus'
+
+import {
+request
+} from '@/utils/request'
+
+
+class BusService {
+/**
+* @description 根据线路查询组织下的车辆列表
+*/
+static listRouteBus(params: ListRouteBusParams): Promise <ListRouteBusRes> {
+return request.post("/tpmng/bus/routeBus", params)
+}
+
+}
+
+export default BusService

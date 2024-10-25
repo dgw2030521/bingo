@@ -1,0 +1,20 @@
+import { request } from '@/utils/request'
+import { <%=respKey%>,<%=paginationKey%> } from '@/types/$common'
+<%if(typeNames.length>0){%>
+import { <%=typeNames.join(',')%> } from '../types/<%=fileName%>'
+<%}%>
+
+
+class <%=fileName%>Service {
+    <% methods.forEach(function (method){%>
+        /**
+        * @description <%=method.summary%>
+        * @param <%=method.params%>
+        */
+        static <%=method.name %>(params: <%=method.params%>): Promise<<%-method.response%>> {
+            return request.<%=method.type %>("<%=method.url%>", params)
+        }
+    <%}) %>
+}
+
+export default <%=fileName%>Service

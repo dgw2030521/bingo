@@ -1,0 +1,13 @@
+<%if(referenceTypeNames.length>0){%>
+import { <%=referenceTypeNames.join(',')%> } from './<%=referenceFileName%>'
+<%}%>
+
+<% deps.forEach(function (dep){%>
+    export interface <%=dep.name%><%if(dep.genericType?.length>0){%><<%-dep.genericType.join(',')%>><%}%> {
+    <%Object.keys(dep.props).forEach(function(propName){%>
+       <% if(dep.props[propName].description){%>
+        /** <%=dep.props[propName].description%> **/
+        <%}%><%=propName%>: <%-dep.props[propName].type%>
+    <%})%>
+    }
+<%})%>

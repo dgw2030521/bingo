@@ -1,0 +1,38 @@
+{
+  "name": "node-ts-common-genApi",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "dependencies": {
+    "@apidevtools/swagger-parser": "^10.1.0",
+    "@types/ejs": "^3.1.2",
+    "@types/lodash": "^4.14.198",
+    "@types/node": "^20.6.0",
+    "ejs": "^3.1.9",
+    "js-beautify": "^1.14.3",
+    "lodash": "^4.17.21",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  },
+  "scripts": {
+    "build": "tsc && node copyTemplate.js",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "dev-watch": "nodemon --ignore tests/ --watch src -e ts,tsx --exec ts-node src/index.ts",
+    "lint": "eslint  --ext .js,.ts --fix src"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@types/js-beautify": "^1.14.1",
+    "@typescript-eslint/eslint-plugin": "^6.7.2",
+    "@typescript-eslint/parser": "^6.7.2",
+    "eslint": "^8.49.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-unused-imports": "^3.0.0",
+    "prettier": "^3.0.3"
+  }
+}
