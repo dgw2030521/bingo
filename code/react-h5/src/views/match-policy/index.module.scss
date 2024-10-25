@@ -1,0 +1,293 @@
+.box {
+  position: relative;
+  width: 100%;
+  height: 128px;
+  padding: 30px 28px;
+  background: #ffffffeb;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 12px;
+
+  .left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 23px;
+  }
+
+  .right {
+    display: flex;
+    justify-content: flex-end;
+    gap: 24px;
+    .operateBtn {
+      color: #ffffff;
+      font-family: 'PingFang SC';
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+
+      width: 148px;
+      height: 60px;
+
+      --border-radius: 90px;
+      --background-color: #23c57c;
+      --border-width: 0;
+    }
+  }
+}
+
+.modal {
+  flex-shrink: 0;
+  //border-radius: 12px;
+  border: 2px solid #fff;
+  background: linear-gradient(0deg, #007aff00 69.28%, #007aff0f 100%), #fff;
+
+  &.matchResult {
+    --min-width: 600px;
+
+    .box {
+      //width: 600px;
+      height: max-content;
+    }
+  }
+  &.deepMatch {
+    --min-width: 640px;
+    .box {
+      //width: 640px;
+      height: max-content;
+    }
+  }
+
+  .box {
+    padding: 52px 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 50px;
+
+    .header {
+      width: 100%;
+      height: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .title {
+        color: #000000;
+        font-family: 'PingFang SC';
+        font-size: 34px;
+        font-style: normal;
+        font-weight: 600;
+      }
+      .close {
+        width: 36px;
+        height: 36px;
+        background: url('./images/close.png') 0 0 no-repeat;
+        background-size: contain;
+        cursor: pointer;
+      }
+    }
+    .content {
+      width: 100%;
+      flex: 1;
+
+      .body {
+        .head {
+          height: 88px;
+          border-radius: 8px;
+          margin-bottom: 60px;
+          background-color: rgba(16, 110, 253, 0.1);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .list {
+          height: max-content;
+          padding-bottom: 40px;
+        }
+      }
+
+      .footer {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 28px;
+        align-items: center;
+      }
+    }
+
+    .contentBtn {
+      height: 84px;
+
+      color: #5e6a7c;
+      --background-color: #f0f2f5;
+      width: 200px;
+
+      font-family: 'PingFang SC';
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 500;
+      text-transform: uppercase;
+
+      &.primary {
+        flex: 1;
+        color: #ffffff;
+        --border-radius: 8px;
+        --background-color: #23c57c;
+        --border-width: 0;
+      }
+    }
+  }
+}
+
+.showMatchResultTitle {
+  color: #333333;
+  font-family: 'PingFang SC';
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.showMatchResult {
+  font-family: 'Avenir Next';
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  &.green {
+    color: #20b16f;
+    .icon {
+      background: url('./images/green.png') 0 0 no-repeat;
+      background-size: contain;
+    }
+  }
+  &.blue {
+    color: #106efd;
+    .icon {
+      background: url('./images/blue.png') 0 0 no-repeat;
+      background-size: contain;
+    }
+  }
+  &.red {
+    color: #ff2d46;
+    .icon {
+      background: url('./images/red.png') 0 0 no-repeat;
+      background-size: contain;
+    }
+  }
+
+  .icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+  }
+
+  .unit {
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px;
+    padding-top: 4px;
+  }
+}
+
+// 匹配结果
+.rules-group {
+  //margin-bottom: 20px;
+}
+.matchedBox {
+  width: 100%;
+  min-height: 36px;
+  padding: 36px 0;
+  border-bottom: 1px solid #00000014;
+
+  .matchedItem {
+    min-height: 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    .title {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      overflow: hidden;
+      .flag {
+        width: 36px;
+        height: 36px;
+        margin-right: 16px;
+        &.matched {
+          background: url('./images/bingo.png') 0 0 no-repeat;
+          background-size: contain;
+        }
+        &.notMatched {
+          background: url('./images/notmatch.png') 0 0 no-repeat;
+          background-size: contain;
+        }
+      }
+      .ruleName {
+        display: inline-block;
+        color: #000000;
+        font-family: 'PingFang SC';
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 500;
+      }
+    }
+
+    .matchDesc {
+      flex-basis: 90px;
+      flex-shrink: 0;
+      color: #5e6a7c;
+      font-family: 'PingFang SC';
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 500;
+      width: 90px;
+      height: 40px;
+      border-radius: 100px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &.matched {
+        color: #23c57c;
+        font-family: 'PingFang SC';
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 500;
+        background: #23c57c26;
+      }
+      &.notMatched {
+        color: #ff2d46;
+        font-family: 'PingFang SC';
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 500;
+        background: #f847491f;
+      }
+    }
+  }
+  .notMatchedReason {
+    padding-top: 20px;
+    color: #999999;
+    font-family: 'PingFang SC';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+
+    width: 100%;
+    display: inline-block;
+    &.hidden {
+      display: none;
+    }
+  }
+}
+// 深度匹配表单

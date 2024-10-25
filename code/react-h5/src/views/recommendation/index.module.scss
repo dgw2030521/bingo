@@ -1,0 +1,154 @@
+$headerHeight: 268px;
+.container {
+  background-color: #106efd;
+
+  .header {
+    position: relative;
+    height: $headerHeight;
+
+    .imageBg {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      opacity: 0.25;
+      width: 328px;
+      height: 269px;
+    }
+
+    .memo {
+      width: 411px;
+      color: #ffffff;
+      font-family: 'PingFang SC';
+      font-size: 26px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 36px;
+      opacity: 0.65;
+      position: absolute;
+      left: 32px;
+      top: 125px;
+    }
+
+    .title {
+      position: absolute;
+      left: 32px;
+      top: 60px;
+
+      .desc {
+        color: #ffffff;
+        font-family: 'PingFang SC';
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 32px;
+      }
+
+      .count {
+        color: #ffffff;
+        font-family: 'Avenir Next';
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 48px;
+      }
+    }
+
+    .reCountBtn {
+      width: 200px;
+      height: 68px;
+      padding: 0 30px 0 66px;
+      border-radius: 100px;
+      background-color: #fff;
+      position: absolute;
+      bottom: 40px;
+      right: 36px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      color: #106efd;
+      font-family: 'PingFang SC';
+      font-size: 26px;
+      font-style: normal;
+      font-weight: 500;
+
+      background-image: url('@/assets/recommendation/refresh.png');
+      background-position: 26px 50%;
+      background-repeat: no-repeat;
+      background-size: 28px;
+    }
+  }
+
+  .content {
+    width: 750px;
+    min-height: calc(100vh - $headerHeight);
+    height: max-content;
+    opacity: 1;
+    border: 2px solid #ffffff;
+    background: #f0f2f5;
+
+    padding: 36px 24px 80px 24px;
+    border-radius: 24px 24px 0 0;
+
+    .toolbar {
+      display: flex;
+      justify-content: space-between;
+
+      margin-bottom: 32px;
+
+      .left {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 36px;
+
+        .item {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          gap: 12px;
+
+          .icon {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-image: url('@/assets/recommendation/bookIcom.png');
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            background-size: contain;
+          }
+
+          .title {
+            display: inline-block;
+            color: #000000;
+            font-family: 'PingFang SC';
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 36px;
+
+      .item {
+        .title {
+          color: #5e6a7c;
+          font-family: 'PingFang SC';
+          font-size: 26px;
+          font-style: normal;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  .list {
+  }
+}

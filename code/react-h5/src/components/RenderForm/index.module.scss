@@ -1,0 +1,32 @@
+.header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 28px;
+  border-left: 6px solid #106efd;
+  padding-left: 18px;
+
+  color: #000000;
+  font-family: 'PingFang SC';
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+
+  margin-bottom: 16px;
+}
+//表单设置
+.renderForm {
+  --border-top: none;
+  --border-bottom: none;
+  --prefix-width: 50%;
+
+  * {
+    font-family: 'PingFang SC';
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+  }
+}
+.formItem {
+  min-height: 100px;
+}

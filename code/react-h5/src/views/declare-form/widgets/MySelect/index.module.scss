@@ -1,0 +1,41 @@
+.searchBarContainer {
+  border-bottom: solid 1px var(--adm-color-border);
+  .searchInput {
+    padding: 50px;
+  }
+  .operateBox {
+    padding: 12px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--adm-color-border);
+    .operateBtn {
+      cursor: pointer;
+      font-size: 28px;
+      display: inline-block;
+      padding: 8px 8px;
+    }
+  }
+}
+
+.checkListContainer {
+  height: 600px;
+  overflow-y: scroll;
+}
+
+.myCheckList {
+  --border-top: 0;
+  --border-bottom: 0;
+}
+
+.contentBox {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  > .tag {
+    display: inline-block;
+    background-color: #e6e6e6;
+    padding: 5px 10px;
+  }
+  > .placeholder {
+    color: rgb(204, 204, 204);
+  }
+}

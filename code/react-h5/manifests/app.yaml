@@ -1,0 +1,41 @@
+# 前端资源部署的路径，需要替换name，image镜像名称部署流水线指定的
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    run: web-customer-new-h5
+  name: web-customer-new-h5
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: web-customer-new-h5
+  template:
+    metadata:
+      labels:
+        run: web-customer-new-h5
+    spec:
+      containers:
+        - image: ${IMAGE}
+          name: web-customer-new-h5
+          envFrom:
+            - configMapRef:
+                name: zczd-common
+      imagePullSecrets:
+        - name: jblz-docker-registry-key
+#---
+#apiVersion: v1
+#kind: Service
+#metadata:
+#  labels:
+#    run: web-customer-new-h5
+#  name: web-customer-new-h5
+#spec:
+#  ports:
+#  - name: web-customer-new-h5
+#    port: 80
+#    protocol: TCP
+#    targetPort: 7777
+#  selector:
+#    run: web-customer-new-h5
+#  type: ClusterIP

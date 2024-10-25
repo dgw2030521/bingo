@@ -1,0 +1,16 @@
+build
+corverage
+docker
+public
+node_modules
+config
+scripts
+.idea
+pnpm-lock.yaml
+.gitignore
+.prettierignore
+.eslintignore
+src/CodeDefine
+src/ViCross
+src/asserts
+

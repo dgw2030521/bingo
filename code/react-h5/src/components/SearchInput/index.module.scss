@@ -1,0 +1,55 @@
+.searchBox {
+  position: relative;
+  width: 100%;
+  height: 86px;
+  flex-shrink: 0;
+  border-radius: 100px;
+  border: 2px solid #ffffffcc;
+  background: #1a49ab3d;
+  backdrop-filter: blur(1px);
+  font-family: 'PingFang SC';
+
+  margin-bottom: 32px;
+
+  //padding: 27px 40px;
+  padding: 0px 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  .fangdajing {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-image: url('@/assets/home/fangdajing.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .searchInput {
+    border-right: 2px solid #fff;
+    flex: 1;
+    color: #ffffff;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    --placeholder-color: rgba(255, 255, 255, 0.8);
+    --color: #ffffff;
+    --font-size: 30px;
+  }
+
+  .searchBtn {
+    margin-left: 20px;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+  }
+}
